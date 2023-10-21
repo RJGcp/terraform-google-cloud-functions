@@ -1,0 +1,13 @@
+steps:
+  - id: 'terraform init'
+    name: 'hashicorp/terraform:1.0.0'
+    script: terraform init
+    dir: examples/cloud_function2_gcs_source
+  - id: 'terraform plan'
+    name: 'hashicorp/terraform:1.0.0'
+    script: terraform plan
+    dir: examples/cloud_function2_gcs_source
+  - id: 'terraform apply'
+    name: 'hashicorp/terraform:1.0.0'
+    script: terraform apply --auto-approve
+    dir: examples/cloud_function2_gcs_source
